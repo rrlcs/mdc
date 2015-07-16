@@ -1,0 +1,185 @@
+head	1.8;
+access;
+symbols;
+locks
+	root:1.8; strict;
+comment	@ * @;
+
+
+1.8
+date	2015.07.11.08.58.32;	author root;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2015.07.11.08.41.41;	author root;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2015.07.10.11.48.19;	author root;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2015.07.10.10.16.25;	author root;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2015.07.10.10.09.39;	author root;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2015.07.10.05.13.50;	author root;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2015.06.26.14.01.50;	author root;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2015.06.26.13.29.34;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@compress5.c created
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"prototypes.h"
+
+int compress5(int fd, char * arr, int len)
+{
+	printf("IN Function %s\t", __func__);
+	printf("len = %d", len);
+	int i, j, l, index, ekey, pos;
+        char buff;
+        char b, c, copy, byte;
+        byte ^= byte;
+        pos  =  lseek(fd, 0, SEEK_SET);
+        printf("\n Position = %d", pos);
+
+	while(1)
+	{
+		read(fd, &buff, 1);
+		if(buff == 10)
+		{
+			break;
+		}
+		index = find_index(buff, arr, len);
+		printf("Index = %d\n", index);
+		c = index;
+		c = c << 3;
+		byte = byte | c;
+		read(fd, &buff, 1);
+		if(buff == 10)
+		{
+			break;
+		}
+		index = find_index(buff, arr, len);
+		b = index;
+		b = b << 3;
+		b = b >> 3;
+		copy = b;
+		b = b & 7;
+		byte = byte | b;
+		ekey = open("encrypt5", O_WRONLY | O_CREAT);
+		write(ekey, &byte, 1);
+		byte ^= byte;
+	}
+	return 0;
+}
+@
+
+
+1.7
+log
+@Logic for 5 bit compression is applied into the compress5 API
+@
+text
+@d39 1
+a39 1
+		ekey = open("encrypt5", O_WRONLY | OCREAT);
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d39 1
+a39 1
+		ekey = open("encrypt5", O_WRONLY | O_CREAT);
+@
+
+
+1.5
+log
+@returned 0
+@
+text
+@d39 1
+a39 1
+		ekey = open("encrypt5", O_WRONLY | OCREAT);
+@
+
+
+1.4
+log
+@API for compressing file of code length 5;
+@
+text
+@d43 1
+a43 1
+
+@
+
+
+1.3
+log
+@variables declared.
+called find_index API and printed the index.
+@
+text
+@d10 1
+a10 1
+        char b, c, byte;
+d24 18
+@
+
+
+1.2
+log
+@file revisited
+@
+text
+@d8 18
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 2
+a2 2
+#indlude"header.h"
+#indlude"prototypes.h"
+d4 1
+a4 1
+int compress4(int fd, char * arr, int len)
+@

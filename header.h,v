@@ -1,0 +1,47 @@
+head	1.2;
+access;
+symbols;
+locks
+	root:1.2; strict;
+comment	@ * @;
+
+
+1.2
+date	2015.06.28.04.28.10;	author root;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2015.06.26.09.13.28;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@Prototypes are excluded from header.h and included in a new file named prototypes.h
+@
+
+
+1.2
+log
+@header file unistd.h included.
+header file sys/types.h included
+@
+text
+@#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<sys/types.h>
+#include<fcntl.h>
+#include<string.h>
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 2
+@

@@ -1,0 +1,311 @@
+head	1.10;
+access;
+symbols;
+locks
+	root:1.10; strict;
+comment	@ * @;
+
+
+1.10
+date	2015.07.07.02.24.36;	author root;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2015.06.29.13.42.43;	author root;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2015.06.29.10.41.26;	author ravi;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2015.06.27.03.58.00;	author ravi;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2015.06.26.13.44.54;	author ravi;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2015.06.26.13.37.06;	author ravi;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2015.06.26.10.41.16;	author root;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2015.06.26.10.18.42;	author root;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2015.06.26.10.10.29;	author root;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2015.06.26.09.29.10;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@error undefined refrence to the file compression.c is removed
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"prototypes.h"
+
+int compress(int fd, char* arr)
+{
+	int cl, len, efd, ret;
+
+	len = strlen(arr);
+	printf("len  = %d", len);
+        
+	cl = code_length(len);
+	efd = create_file2(arr, len);
+	
+	printf("Code Length = %d", cl);
+
+	switch(cl) {
+		case 2 : 
+			ret = compress2(fd, arr, len);
+			if(ret<0)
+				perror("Error:\n");
+			break;
+		case 3 : 
+			ret = compress3(fd, arr, len);
+			if(ret<0)
+				perror("Error:\n");
+			break;
+		case 4 : 
+			ret = compress4(fd, arr, len);
+			if(ret<0)
+				perror("Error:\n");
+			break;
+		case 5 : 
+			ret = compress5(fd, arr, len);
+			if(ret<0)
+				perror("Error:\n");
+			break;
+		case 6 : 
+			ret = compress6(fd, arr, len);
+			if(ret<0)
+				perror("Error:\n");
+			break;
+		case 7 : 
+			ret = compress7(fd, arr, len);
+			if(ret<0)
+				perror("Error:\n");
+			break;
+	}
+	
+	return 0;
+}
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d30 1
+a30 1
+			//	perror("Error:\n");
+d35 1
+a35 1
+			//	perror("Error:\n");
+d40 1
+a40 1
+			//	perror("Error:\n");
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d30 1
+a30 1
+				perror("Error:\n");
+d35 1
+a35 1
+				perror("Error:\n");
+d40 1
+a40 1
+				perror("Error:\n");
+@
+
+
+1.7
+log
+@All the seven functions declared as extern are called using switch case statements.
+@
+text
+@d48 2
+@
+
+
+1.6
+log
+@error from switch statement is removed.
+@
+text
+@d16 1
+a16 1
+	switch(cl)
+d20 2
+a21 1
+				break;
+d25 2
+a26 1
+				break;
+d30 2
+a31 2
+				printf("Compression failed!");
+				break;
+d35 2
+a36 1
+				break;
+d40 2
+a41 1
+				break;
+d45 3
+a47 1
+				break;
+@
+
+
+1.5
+log
+@Functions for compressing file of variable code length are called using switch case statements
+@
+text
+@d16 1
+a16 1
+	switch(cl);
+d28 1
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d4 1
+a4 1
+compress(int fd, char* arr)
+d6 1
+a6 1
+	int cl, len, efd;
+d16 25
+a40 1
+
+@
+
+
+1.3
+log
+@new file descripter declared
+@
+text
+@d7 5
+d13 1
+a13 2
+	len = strlen(arr);
+        cl = code_length(len);
+d15 1
+@
+
+
+1.2
+log
+@rebuilded by getting arguments as char* and calling functioins create_master_array and code_length()
+@
+text
+@d6 1
+a6 1
+	int cl, len;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 1
+a4 1
+compress(int fd, int efd)
+d6 5
+a10 15
+	char *buff, *arr, *encrypted, ch, c, byte;
+	int i, j, l1, l2, index, ekey;
+	byte = byte ^ byte;
+	buff = (char*)malloc(sizeof(char)*128);
+	buff = (char*)malloc(sizeof(char)*128);
+	buff = (char*)malloc(sizeof(char)*128);
+	
+//	open("hello", O_RDONLY);
+//OB	open("GOT", O_RDONLY);
+	
+	read(fd, &buff, 50);
+	l1 = strlen(buff);
+	
+	read(efd, &arr, 50);
+	l2 = strlen(arr);
+a11 35
+	while(buff = NULL)
+	{
+		for(i=1; i<=l1; i++)
+		{
+		ch = *(buff + i);
+		for(j=1; j<=l2; j++)
+		{
+			if(j/2!=0)
+			{
+				if(ch == *(arr + j))
+				{
+					index = j;
+					c = index;
+					c << 4;
+					byte = byte | c;
+				}
+			}
+			else
+			{
+				
+				if(ch == *(arr + j))
+				{
+					index = j;
+					c = index;
+					c << 4;
+					c >> 4;
+					byte = byte | c;
+					ekey = open("encrypted", O_WRONLY | O_CREAT);
+					write(ekey, encrypted,  1);
+				}
+			}
+		}
+		}
+	}
+	
+@

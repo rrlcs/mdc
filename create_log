@@ -1,0 +1,13 @@
+#! /bin/bash
+
+rlog mdc.c,v		>	$1
+rlog header.h,v		>>	$1
+rlog prototypes.h,v	>>	$1
+rlog compress.c,v	>>	$1
+rlog compress2.c,v	>>	$1
+rlog compress3.c,v	>>	$1
+rlog compress4.c,v	>>	$1
+rlog compress5.c,v	>>	$1
+rlog compress6.c,v	>>	$1
+rlog compress7.c,v	>>	$1
+

@@ -1,0 +1,1043 @@
+head	1.53;
+access;
+symbols;
+locks
+	root:1.53; strict;
+comment	@ * @;
+
+
+1.53
+date	2015.07.15.09.26.59;	author root;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2015.07.13.12.59.03;	author root;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2015.07.13.12.51.13;	author root;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2015.07.13.12.45.38;	author root;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2015.07.13.12.25.44;	author root;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2015.07.13.12.24.28;	author root;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2015.07.13.12.22.57;	author root;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2015.07.13.12.00.23;	author root;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2015.07.13.11.50.20;	author root;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2015.07.13.11.49.48;	author root;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2015.07.13.11.41.47;	author root;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2015.07.13.11.07.46;	author root;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2015.07.13.10.56.10;	author root;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2015.07.13.10.26.34;	author root;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2015.07.13.10.22.37;	author root;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2015.07.13.10.21.32;	author root;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2015.07.13.10.20.59;	author root;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2015.07.13.10.19.18;	author root;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2015.07.13.10.13.25;	author root;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2015.07.13.10.07.04;	author root;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2015.07.13.10.04.56;	author root;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2015.07.13.10.01.24;	author root;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2015.07.13.09.53.26;	author root;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2015.07.13.07.08.07;	author root;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2015.07.13.07.07.26;	author root;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2015.07.13.07.05.44;	author root;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2015.07.13.07.01.36;	author root;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2015.07.13.06.45.02;	author root;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2015.07.13.06.41.02;	author root;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2015.07.13.06.35.34;	author root;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2015.07.13.06.33.10;	author root;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2015.07.13.06.27.01;	author root;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2015.07.13.06.17.19;	author root;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2015.07.13.06.05.47;	author root;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2015.07.13.06.04.15;	author root;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2015.07.13.06.02.52;	author root;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2015.07.13.05.57.19;	author root;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2015.07.13.04.41.59;	author root;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2015.07.13.04.40.16;	author root;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2015.07.13.04.22.48;	author root;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2015.07.12.12.52.40;	author root;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2015.07.12.12.48.26;	author root;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2015.07.12.12.46.00;	author root;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2015.07.12.12.44.06;	author root;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2015.07.12.12.39.40;	author root;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2015.07.12.12.28.56;	author root;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2015.07.12.12.25.40;	author root;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2015.07.12.12.25.09;	author root;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2015.07.12.12.22.54;	author root;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2015.07.12.10.58.48;	author root;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2015.07.12.10.53.27;	author root;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2015.07.12.10.50.15;	author root;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2015.07.12.10.46.56;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@API for 4 bit code length
+@
+
+
+1.53
+log
+@char changed to unsigned char
+@
+text
+@#include"header.h"
+#include"prototypes.h"
+
+int decompress4(int fd, int len)
+{
+//	printf("In Function %s\n", __func__);
+	printf("In Function %s\nfd = %d\n", __func__, fd);
+	int cl, ekey, i, integer, dfd, count;
+	unsigned char ch, c, buff, *ma, *dchar;
+//	c =(char *)malloc(sizeof(char));
+	ma = (char *) malloc(sizeof(char)*len);
+	dchar = (char *) malloc(sizeof(char));
+	ekey = open("encrypt", O_RDONLY);
+	dfd = open("decompressed_file", O_WRONLY | O_CREAT | O_APPEND);
+	i = 0;
+	while(1)
+	{
+		read(fd, &ch, 1);
+		
+		if(ch == 10)
+		{
+			break;
+		}
+	
+		*(ma+i) = ch;
+		i++;
+		
+	}
+	printf("Master Array in Decompress4.c is \n %s\n", ma);	
+	while(1)
+	{
+	read(ekey, &buff, 1);
+       	if(buff == 10)
+	{
+		break;
+	}
+	c = buff;
+	c = c >> 4;
+	integer = (int)c;
+	printf("\nInteger Value = %d", integer);
+		for(i=0; i<=len; i++)
+		{
+			if(integer == i)
+			{
+				*dchar = *(ma + i);
+
+				write(dfd, dchar, 1);
+			}
+		}
+	
+	c = buff;
+	c = c & 15;
+	integer = (int)c;
+
+	printf("\nInteger Value Second Time= %d", integer);
+
+		for(i=0; i<=len; i++)
+		{
+			if(integer == i)
+			{
+				*dchar = *(ma + i);
+				write(dfd, dchar, 1);
+			}
+		}
+	}
+	return 0;
+}
+@
+
+
+1.52
+log
+@*** empty log message ***
+@
+text
+@d9 1
+a9 1
+	char ch, c, buff, *ma, *dchar;
+@
+
+
+1.51
+log
+@Succesfully Decompressed the encrypted file.
+wrote the decompressed file in decompressed_file
+4 bit decompression completed
+@
+text
+@d40 1
+a40 1
+	printf("Integer Value = %d", integer);
+d55 1
+a55 1
+	printf("Integer Value Second Time= %d", integer);
+@
+
+
+1.50
+log
+@*** empty log message ***
+@
+text
+@d41 1
+a41 1
+		for(i=0; i<len; i++)
+d57 1
+a57 1
+		for(i=0; i<len; i++)
+@
+
+
+1.49
+log
+@*** empty log message ***
+@
+text
+@d9 2
+a10 2
+	char ch, *c, buff, *ma, *dchar;
+	c =(char *)malloc(sizeof(char));
+d37 3
+a39 3
+	*c = buff;
+	*c = *c >> 4;
+	integer = atoi(c);
+d51 3
+a53 3
+	*c = buff;
+	*c = *c & 15;
+	integer = atoi(c);
+@
+
+
+1.48
+log
+@*** empty log message ***
+@
+text
+@d54 2
+a55 1
+	printf("Integer Value = %d", integer);
+@
+
+
+1.47
+log
+@*** empty log message ***
+@
+text
+@d52 1
+a52 1
+	*c = *c & 0x0F;
+@
+
+
+1.46
+log
+@*** empty log message ***
+@
+text
+@d40 1
+a40 1
+
+d54 1
+@
+
+
+1.45
+log
+@*** empty log message ***
+@
+text
+@d11 1
+a11 1
+
+d15 1
+d24 3
+a26 6
+		
+		for(i=0; i<len; i++)
+		{
+			ma = (char *) realloc(ma, i+1);
+			*(ma+i) = ch;
+		}
+@
+
+
+1.44
+log
+@*** empty log message ***
+@
+text
+@d26 1
+a26 1
+			ma = (char *) realloc(i+1);
+@
+
+
+1.43
+log
+@*** empty log message ***
+@
+text
+@d11 1
+a11 1
+	ma = (char *) malloc(sizeof(char)*20);
+d26 1
+@
+
+
+1.42
+log
+@*** empty log message ***
+@
+text
+@d19 1
+a19 1
+		if(!ch)
+d34 1
+a34 1
+       	if(!buff)
+@
+
+
+1.41
+log
+@*** empty log message ***
+@
+text
+@d19 1
+a19 1
+		if(ch == 0x03)
+d34 1
+a34 1
+       	if(buff == 0x03)
+@
+
+
+1.40
+log
+@*** empty log message ***
+@
+text
+@d19 1
+a19 1
+		if(!ch)
+d23 1
+a23 1
+		printf("Ravi Raja");
+d34 1
+a34 1
+       	if(buff == 0x0F)
+a60 1
+			//	dfd = open("decompressed_file", O_WRONLY | O_CREAT | O_APPEND);
+@
+
+
+1.39
+log
+@*** empty log message ***
+@
+text
+@d15 1
+a15 1
+	while(ch)
+d23 1
+a23 1
+
+@
+
+
+1.38
+log
+@*** empty log message ***
+@
+text
+@d15 1
+a15 1
+	while(1)
+@
+
+
+1.37
+log
+@*** empty log message ***
+@
+text
+@d19 1
+a19 1
+		if(ch == NULL)
+@
+
+
+1.36
+log
+@*** empty log message ***
+@
+text
+@d19 1
+a19 1
+		if(ch == 10)
+@
+
+
+1.35
+log
+@condition checked for the 0x0F and loop breaked;
+@
+text
+@d15 1
+a15 1
+	while(ch)
+d29 2
+a30 1
+	}	
+a39 1
+	printf("First encrypted character %c", buff);
+a53 1
+	printf("First encrypted character %c", buff);
+@
+
+
+1.34
+log
+@*** empty log message ***
+@
+text
+@d33 1
+a33 1
+       	if(buff == 10)
+@
+
+
+1.33
+log
+@*** empty log message ***
+@
+text
+@d15 1
+a15 1
+	while(1)
+@
+
+
+1.32
+log
+@Logic for decompressing file applied.... checking it!
+@
+text
+@d14 1
+d47 1
+a47 1
+				dfd = open("decompressed_file", O_WRONLY | O_CREAT | O_APPEND);
+d62 1
+a62 1
+				dfd = open("decompressed_file", O_WRONLY | O_CREAT | O_APPEND);
+@
+
+
+1.31
+log
+@*** empty log message ***
+@
+text
+@a13 11
+	while(ch)
+	{
+	read(ekey, &buff, 1);
+       	if(buff == 10)
+	{
+		break;
+	}
+	*c = buff;
+	*c = *c >> 4;
+	printf("First encrypted character %c", buff);
+	integer = atoi(c);
+d27 1
+a27 1
+		count++;
+d29 12
+d51 14
+@
+
+
+1.30
+log
+@*** empty log message ***
+@
+text
+@d14 1
+a14 1
+	while(1)
+a24 1
+	count = 0;
+d27 1
+a27 1
+		count = read(fd, &ch, 1);
+@
+
+
+1.29
+log
+@*** empty log message ***
+@
+text
+@d17 1
+a17 1
+       	if(buff == 10101010101010101010)
+@
+
+
+1.28
+log
+@*** empty log message ***
+@
+text
+@d17 1
+a17 1
+       	if(buff == NULL)
+d30 1
+a30 1
+		if(count == 10)
+@
+
+
+1.27
+log
+@*** empty log message ***
+@
+text
+@d17 1
+a17 1
+       	if(buff == 10)
+@
+
+
+1.26
+log
+@*** empty log message ***
+@
+text
+@d14 2
+d17 5
+a21 1
+       	*c = buff;
+d29 1
+a29 1
+
+d40 1
+a40 1
+		
+d50 1
+@
+
+
+1.25
+log
+@*** empty log message ***
+@
+text
+@d34 1
+a34 1
+	}	
+d44 1
+a44 1
+	
+@
+
+
+1.24
+log
+@*** empty log message ***
+@
+text
+@d24 1
+a24 1
+		if(count == len)
+@
+
+
+1.23
+log
+@*** empty log message ***
+@
+text
+@d24 1
+a24 1
+		if(count == 12)
+@
+
+
+1.22
+log
+@*** empty log message ***
+@
+text
+@d26 1
+a26 1
+			exit(EXIT_SUCCESS);
+@
+
+
+1.21
+log
+@*** empty log message ***
+@
+text
+@d6 2
+a7 2
+	printf("In Function %s\n", __func__);
+	printf("In Function %s\nfd = %d", __func__, fd);
+@
+
+
+1.20
+log
+@*** empty log message ***
+@
+text
+@d8 1
+a8 1
+	int cl, ekey, i, integer, dfd;
+@
+
+
+1.19
+log
+@*** empty log message ***
+@
+text
+@d23 1
+a23 1
+//		printf("First character from ma %s", &ch);
+@
+
+
+1.18
+log
+@*** empty log message ***
+@
+text
+@d23 1
+a23 1
+		printf("First character from ma %s", &ch);
+@
+
+
+1.17
+log
+@1
+@
+text
+@d17 1
+a17 1
+	printf("First encrypted character %c", *c);
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@d19 1
+d22 1
+a22 1
+		read(fd, &ch, 1);
+d24 1
+a24 1
+		if(ch == 10)
+d33 1
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d25 1
+a25 1
+			break;
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d22 1
+a22 1
+		printf("First character from ma %c", ch);
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@d23 1
+a23 1
+		if(!ch)
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d22 1
+a22 1
+		printf("First character from ma c", ch);
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d7 1
+d22 1
+a22 1
+		printf("First character from ma %c", ch);
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d21 1
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d16 1
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d35 1
+a35 1
+				dfd = open("decompressed_file", O_WRONLY | O_CREAT);
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d8 1
+a8 1
+	char ch, *c, buff, *ma, dchar;
+d11 1
+d34 1
+a34 1
+				dchar = *(ma + i);
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d35 1
+a35 1
+				write = (dfd, dchar, 1);
+@
+
+
+1.5
+log
+@file decompression testing!!!
+@
+text
+@d7 1
+a7 1
+	int cl, ekey, i, integer;
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d7 4
+a10 2
+	int cl, ekey, i;
+	char ch, *c, buff, ma;
+a11 1
+//	fd = open("masterArray", O_RDONLY);
+d15 1
+a15 1
+	i = atoi(c);
+d18 2
+a19 2
+		read(fd, &ma, 1);
+		if(!ma)
+d23 2
+a24 1
+		if(i == ma)
+d26 1
+a26 1
+			
+d28 11
+a38 1
+	}
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d7 1
+a7 1
+	char ch, c, buff, ma;
+d11 2
+a12 2
+       	c = buff;
+	c = c >> 4;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+	int cl, len, ekey, i;
+@

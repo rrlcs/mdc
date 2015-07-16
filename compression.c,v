@@ -1,0 +1,32 @@
+head	1.1;
+access;
+symbols;
+locks
+	root:1.1; strict;
+comment	@ * @;
+
+
+1.1
+date	2015.06.26.09.14.28;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@prototypes.h header file is included
+an attempt to create the logic for compression is made
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#include"header.h"
+
+compression(int fd, int efd)
+{
+	printf("In Function compression");
+}
+@

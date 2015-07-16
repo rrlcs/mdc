@@ -1,0 +1,109 @@
+#! /bin/bash
+
+
+#rcs -i header.h
+#rcs -i prototypes.h
+#rcs -i mdc.c
+#rcs -i compress.c
+#rcs -i compress2.c
+#rcs -i compress3.c
+#rcs -i compress4.c
+#rcs -i compress5.c
+#rcs -i compress6.c
+#rcs -i compress7.c
+#rcs -i find_index.c
+
+ci header.h
+ci prototypes.h
+ci mdc.c
+ci compress.c
+ci compress2.c
+ci compress3.c
+ci compress4.c
+ci compress5.c
+ci compress6.c
+ci compress7.c
+ci find_index.c
+ci decompress.c
+ci decompress2.c
+ci decompress3.c
+ci decompress4.c
+ci decompress5.c
+ci decompress6.c
+ci decompress7.c
+
+co header.h
+co prototypes.h
+co mdc.c
+co compress.c
+co compress2.c
+co compress3.c
+co compress4.c
+co compress5.c
+co compress6.c
+co compress7.c
+co find_index.c
+co decompress.c
+co decompress2.c
+co decompress3.c
+co decompress4.c
+co decompress5.c
+co decompress6.c
+co decompress7.c
+
+gcc -c mdc.c
+gcc -c compress.c
+gcc -c compress2.c
+gcc -c compress3.c
+gcc -c compress4.c
+gcc -c compress5.c
+gcc -c compress6.c
+gcc -c compress7.c
+gcc -c find_index.c
+gcc -c decompress.c
+gcc -c decompress2.c
+gcc -c decompress3.c
+gcc -c decompress4.c
+gcc -c decompress5.c
+gcc -c decompress6.c
+gcc -c decompress7.c
+
+gcc -o mdc mdc.o compress.o compress2.o compress3.o compress4.o compress5.o compress6.o compress7.o find_index.o decompress.o decompress2.o decompress3.o decompress4.o decompress5.o decompress6.o decompress7.o
+./mdc hello
+
+
+rm mdc.o
+rm compress.o
+rm compress2.o
+rm compress3.o
+rm compress4.o
+rm compress5.o
+rm compress6.o
+rm compress7.o
+rm find_index.o
+rm decompress.o
+rm decompress2.o
+rm decompress3.o
+rm decompress4.o
+rm decompress5.o
+rm decompress6.o
+rm decompress7.o
+
+co -l header.h
+co -l prototypes.h
+co -l mdc.c
+co -l compress.c
+co -l compress2.c
+co -l compress3.c
+co -l compress4.c
+co -l compress5.c
+co -l compress6.c
+co -l compress7.c
+co -l find_index.c
+co -l decompress.c
+co -l decompress2.c
+co -l decompress3.c
+co -l decompress4.c
+co -l decompress5.c
+co -l decompress6.c
+co -l decompress7.c

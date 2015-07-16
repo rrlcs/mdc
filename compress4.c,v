@@ -1,0 +1,757 @@
+head	1.36;
+access;
+symbols;
+locks
+	root:1.36; strict;
+comment	@ * @;
+
+
+1.36
+date	2015.07.15.09.26.37;	author root;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2015.07.13.11.41.46;	author root;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2015.07.13.11.08.39;	author root;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2015.07.13.10.56.08;	author root;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2015.07.13.10.12.46;	author root;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2015.07.12.12.51.09;	author root;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2015.07.12.12.32.54;	author root;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2015.07.10.11.54.31;	author root;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2015.07.10.11.44.18;	author root;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2015.07.10.04.37.06;	author root;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2015.06.28.06.08.53;	author root;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2015.06.28.06.04.30;	author root;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2015.06.28.05.44.51;	author root;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2015.06.28.05.41.12;	author root;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2015.06.28.05.30.32;	author root;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2015.06.28.05.29.14;	author root;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2015.06.28.05.22.25;	author root;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2015.06.28.05.20.40;	author root;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2015.06.28.05.07.15;	author root;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2015.06.28.05.06.32;	author root;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2015.06.28.05.02.52;	author root;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2015.06.28.04.58.40;	author root;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2015.06.28.04.51.34;	author root;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2015.06.28.04.31.22;	author root;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2015.06.28.04.24.13;	author root;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2015.06.27.13.18.21;	author root;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2015.06.27.13.04.33;	author root;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2015.06.27.13.00.57;	author root;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2015.06.27.12.55.28;	author root;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2015.06.27.12.51.59;	author root;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2015.06.27.12.43.00;	author root;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2015.06.27.12.32.17;	author root;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2015.06.27.11.46.51;	author root;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2015.06.27.11.37.36;	author root;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2015.06.26.14.01.42;	author root;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2015.06.26.13.29.22;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@compress4.c created
+@
+
+
+1.36
+log
+@char changed to unsigned char.
+@
+text
+@#include"header.h"
+#include"prototypes.h"
+
+int compress4(int fd, char* arr, int len)
+{
+	int i, j, l, index, ekey, pos;
+	unsigned char buff;
+	unsigned char b, c, byte;
+	byte ^= byte;	
+	pos  =	lseek(fd, 0, SEEK_SET);	
+	printf("\n Position = %d", pos);
+	
+	while(1)
+	{	
+		read(fd, &buff, 1);
+		if(buff == 10)
+		{
+			break;
+		}
+                index = find_index(buff, arr, len);
+		printf("Index = %d\n", index);	
+		c = index;
+		c = c << 4;
+		byte = byte | c;
+
+		read(fd, &buff, 1);
+		if(buff == 10)
+		{
+			break;
+		}
+                index = find_index(buff, arr, len);
+		b = index;
+		b = b << 4;
+		b = b >> 4;
+		byte = byte | b;
+		printf("Index = %d\n", index);	
+		printf("Hex Value = %x\n", byte);
+                ekey = open("encrypt", O_WRONLY | O_CREAT | O_APPEND);
+                write(ekey, &byte,  1);
+		byte ^= byte; 
+	}
+	byte = byte | 0x0A;
+	write(ekey, &byte, 1);
+	close(fd);
+	return 0;
+}
+@
+
+
+1.35
+log
+@*** empty log message ***
+@
+text
+@d7 2
+a8 2
+	char buff;
+	char b, c, byte;
+@
+
+
+1.34
+log
+@*** empty log message ***
+@
+text
+@d42 1
+a42 1
+	byte = '\0';
+@
+
+
+1.33
+log
+@*** empty log message ***
+@
+text
+@d42 1
+a42 1
+	byte = 0x03;
+@
+
+
+1.32
+log
+@0x0F entered as the Last Character in the encrypted file
+@
+text
+@d42 1
+a42 1
+	byte = 0x0F;
+@
+
+
+1.31
+log
+@*** empty log message ***
+@
+text
+@d42 2
+@
+
+
+1.30
+log
+@*** empty log message ***
+@
+text
+@d42 1
+@
+
+
+1.29
+log
+@*** empty log message ***
+@
+text
+@d38 1
+a38 1
+                ekey = open("encrypt", O_WRONLY | O_APPEND);
+@
+
+
+1.28
+log
+@printing the hex value of the byte.
+@
+text
+@d36 1
+@
+
+
+1.27
+log
+@API for compressing 4 bit data done!
+file compressed and written into a file
+@
+text
+@d36 1
+@
+
+
+1.26
+log
+@*** empty log message ***
+@
+text
+@d6 6
+a11 6
+	int i, j, l1, index, ekey, count;
+	char buff, *org;
+	char ch, c, byte;
+//	buff = (char*) malloc(sizeof(char)*64);
+	org = (char *) malloc(sizeof(char)*128);
+	printf("\n fd1 = %d", fd);
+d13 1
+a13 6
+	lseek(fd, 0, SEEK_SET);	
+	
+	printf("\n fd2 = %d", fd);
+	i = 0;
+	count = 1;
+	while(count != 0)
+d15 3
+a17 2
+		count = read(fd, &buff, 1);
+		if(count == 10)
+d19 6
+d26 2
+a27 10
+                *(org+i)=buff;
+                i++;
+	}
+
+	l1 = strlen(org);
+	printf("\nl1 from compress4 is = %d", l1);
+	printf("\nOriginal File is %s", org);	
+	while(org != NULL )
+	{
+		for(i=0; i<l1; i++)
+d29 1
+a29 28
+		ch = *(org + i);
+		for(j=0; j<len; j++)
+		{
+			if((j/2)==0)
+			{
+				if(ch == *(arr + j))
+				{
+					index = j;
+					c = index;
+					c << 4;
+					byte = byte | c;
+				}
+			}
+			else
+			{
+				
+				if(ch == *(arr + j))
+				{
+					index = j;
+					c = index;
+					c << 4;
+					c >> 4;
+					byte = byte | c;
+					ekey = open("encrypted", O_WRONLY | O_CREAT);
+					write(ekey, byte,  1);
+				}
+			}
+		}
+d31 8
+@
+
+
+1.25
+log
+@*** empty log message ***
+@
+text
+@d31 1
+a31 1
+	while(org = NULL)
+@
+
+
+1.24
+log
+@*** empty log message ***
+@
+text
+@d30 1
+a30 1
+	
+@
+
+
+1.23
+log
+@*** empty log message ***
+@
+text
+@d31 1
+a31 1
+	while(buff = NULL)
+d35 1
+a35 1
+		ch = *(buff + i);
+@
+
+
+1.22
+log
+@*** empty log message ***
+@
+text
+@d65 1
+a65 1
+	
+@
+
+
+1.21
+log
+@*** empty log message ***
+@
+text
+@d10 1
+a10 1
+	org = (char *) malloc(sizeof(char)*64);
+@
+
+
+1.20
+log
+@*** empty log message ***
+@
+text
+@d10 1
+d23 1
+a23 1
+		org = (char *) realloc(org, i+1);
+@
+
+
+1.19
+log
+@*** empty log message ***
+@
+text
+@d22 2
+a23 2
+		arr = (char *) realloc(arr, i+1);
+                *(arr+i)=buff;
+d27 1
+a27 1
+	l1 = strlen(buff);
+@
+
+
+1.18
+log
+@*** empty log message ***
+@
+text
+@d6 2
+a7 2
+	int i, j, l1, index, ekey;
+	char *buff;
+d12 1
+a12 1
+//	lseek(fd, 0, SEEK_SET);	
+d15 1
+d19 6
+a24 2
+		read(fd, &buff, 1);
+		
+d26 1
+@
+
+
+1.17
+log
+@*** empty log message ***
+@
+text
+@d12 1
+a12 1
+	lseek(fd, 0, SEEK_SET);	
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@d9 2
+a10 2
+	buff = (char*) malloc(sizeof(char)*64);
+	printf("\n fd = %d", fd);
+d14 1
+a14 1
+	printf("\n fd = %d", fd);
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d15 6
+a20 2
+	
+	read(fd, &buff, 64);
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d7 1
+a7 1
+	char* buff;
+d9 1
+a9 1
+	//buff = (char*) malloc(sizeof(char)*64);
+d12 1
+a12 1
+	0 lseek(fd, 0, SEEK_SET);	
+d16 1
+a16 1
+	read(fd, &buff, 1);
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@d9 1
+a9 1
+	buff = (char*) malloc(sizeof(char)*64);
+d12 1
+a12 1
+	lseek(fd, 0, SEEK_SET);	
+@
+
+
+1.12
+log
+@position of file descriptor changed using lseek
+@
+text
+@d1 1
+a1 1
+include"header.h"
+@
+
+
+1.11
+log
+@debugging is carrying out
+@
+text
+@d1 1
+a1 1
+#include"header.h"
+d11 1
+d13 1
+d15 2
+a16 1
+	read(fd, &buff, 50);
+d19 1
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d10 3
+a12 1
+	
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d13 1
+a13 1
+	printf("%d", l1);
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d4 1
+a4 1
+int compress(int fd, char* arr, int len)
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d4 1
+a4 1
+compress(int fd, char* arr, int len)
+d19 1
+a19 1
+		for(j=0; j<l2; j++)
+@
+
+
+1.6
+log
+@variables declared.
+@
+text
+@d42 1
+a42 1
+					write(ekey, encrypted,  1);
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d6 1
+d8 1
+@
+
+
+1.4
+log
+@arguments changed
+@
+text
+@d6 2
+a7 9
+	char *buff, *arr, *encrypted, ch, c, byte;
+	int i, j, l1, l2, index, ekey;
+	byte = byte ^ byte;
+	buff = (char*)malloc(sizeof(char)*128);
+	buff = (char*)malloc(sizeof(char)*128);
+	buff = (char*)malloc(sizeof(char)*128);
+	
+//	open("hello", O_RDONLY);
+//OB	open("GOT", O_RDONLY);
+d11 1
+a11 4
+	
+	read(efd, &arr, 50);
+	l2 = strlen(arr);
+
+d14 1
+a14 1
+		for(i=1; i<=l1; i++)
+d17 1
+a17 1
+		for(j=1; j<=l2; j++)
+d19 1
+a19 1
+			if(j/2!=0)
+@
+
+
+1.3
+log
+@creating logic for compressing 4bit file
+@
+text
+@d4 1
+a4 1
+compress(int fd, int efd)
+@
+
+
+1.2
+log
+@file revisited
+@
+text
+@d4 1
+a4 1
+int compress4(int fd, char * arr, int len)
+d6 51
+a56 2
+	printf("IN Function %s\t", __func__);
+	printf("len = %d", len);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 2
+a2 2
+#indlude"header.h"
+#indlude"prototypes.h"
+@

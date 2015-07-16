@@ -1,0 +1,54 @@
+head	1.2;
+access;
+symbols;
+locks
+	root:1.2; strict;
+comment	@ * @;
+
+
+1.2
+date	2015.06.26.14.02.02;	author root;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2015.06.26.13.32.05;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@compress7.c
+created
+@
+
+
+1.2
+log
+@file revisited
+@
+text
+@#include"header.h"
+#include"prototypes.h"
+
+int compress7(int fd, char * arr, int len)
+{
+	printf("IN Function %s\t", __func__);
+	printf("len = %d", len);
+}
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 2
+a2 2
+#indlude"header.h"
+#indlude"prototypes.h"
+d4 1
+a4 1
+int compress4(int fd, char * arr, int len)
+@

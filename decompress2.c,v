@@ -1,0 +1,88 @@
+head	1.3;
+access;
+symbols;
+locks
+	root:1.3; strict;
+comment	@ * @;
+
+
+1.3
+date	2015.07.12.10.56.33;	author root;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2015.07.12.10.50.09;	author root;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2015.07.12.10.46.56;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@API for 2bit code length
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"prototypes.h"
+
+int decompress2(int fd, int len)
+{
+	int cl, ekey, i;
+	char ch, *c, buff, ma;
+	ekey = open("encrypt", O_RDONLY);
+//	fd = open("masterArray", O_RDONLY);
+	read(ekey, &buff, 1);
+       	*c = buff;
+	*c = *c >> 4;
+	i = atoi(c);
+	while(1)
+	{
+		read(fd, &ma, 1);
+		if(!ma)
+		{
+			break;
+		}
+		if(i == ma)
+		{
+			
+		}
+	}
+	return 0;
+}
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d7 1
+a7 1
+	char ch, c, buff, ma;
+d11 2
+a12 2
+       	c = buff;
+	c = c >> 4;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+	int cl, len, ekey, i;
+@

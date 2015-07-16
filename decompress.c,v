@@ -1,0 +1,208 @@
+head	1.8;
+access;
+symbols;
+locks
+	root:1.8; strict;
+comment	@ * @;
+
+
+1.8
+date	2015.07.13.12.22.56;	author root;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2015.07.13.11.05.03;	author root;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2015.07.13.11.04.39;	author root;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2015.07.13.07.25.01;	author root;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2015.07.12.10.58.46;	author root;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2015.07.12.10.36.33;	author root;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2015.07.12.10.34.19;	author root;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2015.07.11.08.42.44;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@API for decompression
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"prototypes.h"
+
+int decompress()
+{
+	printf("In Function %s\n", __func__);
+	int cl, len, fd, ret, pos;
+	char ch, c;
+	fd = open("masterArray", O_RDONLY);
+	len = lseek(fd, 0, SEEK_END);
+	printf("len  = %d", len);
+	cl = code_length(len);	
+	pos = lseek(fd, 0, SEEK_SET);
+	printf("Code Length = %d", cl);
+	printf("Position = %d", pos);
+
+	switch(cl) {
+		case 2 : 
+			ret = decompress2(fd, len);
+			if(ret<0)
+				perror("Error:\n");
+			break;
+		case 3 : 
+			ret = decompress3(fd, len);
+			if(ret<0)
+				perror("Error:\n");
+			break;
+		case 4 : 
+			ret = decompress4(fd, len);
+			if(ret<0)
+				perror("Error:\n");
+			break;
+		case 5 : 
+			ret = decompress5(fd, len);
+			if(ret<0)
+				perror("Error:\n");
+			break;
+		case 6 : 
+			ret = decompress6(fd, len);
+			if(ret<0)
+				perror("Error:\n");
+			break;
+		case 7 : 
+			ret = decompress7(fd, len);
+			if(ret<0)
+				perror("Error:\n");
+			break;
+	}
+	
+	return 0;
+}
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@a8 1
+//	ekey = open("encrypt", O_RDONLY);
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d7 1
+a7 1
+	int cl, len, fd, ret;
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d14 1
+a14 1
+	lseek(fd, 0, SEEK_SET);
+d16 1
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d14 1
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d6 1
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d17 1
+a17 1
+			ret = decompress2(arr, len);
+d22 1
+a22 1
+			ret = decompress3(arr, len);
+d32 1
+a32 1
+			ret = decompress5(fd, arr, len);
+d37 1
+a37 1
+			ret = decompress6(fd, arr, len);
+d42 1
+a42 1
+			ret = decompress7(fd, arr, len);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+	int cl, len, efd, ret;
+d9 2
+a10 1
+	len = strlen(arr);
+d17 1
+a17 1
+			ret = decompress2(fd, arr, len);
+d22 1
+a22 1
+			ret = decompress3(fd, arr, len);
+d27 1
+a27 1
+			ret = decompress4(arr, len);
+@

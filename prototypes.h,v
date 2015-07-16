@@ -1,0 +1,147 @@
+head	1.8;
+access;
+symbols;
+locks
+	root:1.8; strict;
+comment	@ * @;
+
+
+1.8
+date	2015.07.12.10.34.16;	author root;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2015.07.11.08.58.28;	author root;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2015.07.11.08.40.24;	author root;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2015.07.10.11.42.49;	author root;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2015.07.10.04.41.44;	author root;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2015.06.26.13.25.41;	author root;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2015.06.26.10.08.53;	author root;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2015.06.26.09.13.28;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@prototyping done!
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@// prototypes declaration
+int code_length(int);
+int open_file1();
+char* master_array(int);
+int create_file2(char* , int);
+extern int compress(int, char*);
+extern int compress2(int, char*, int);
+extern int compress3(int, char*, int);
+extern int compress4(int, char*, int);
+extern int compress5(int, char*, int);
+extern int compress6(int, char*, int);
+extern int compress7(int, char*, int);
+extern int find_index(char, char*, int);
+extern int decompress();
+extern int decompress4(int, int);
+
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d15 1
+@
+
+
+1.6
+log
+@prototypes for decompression API for 4 bit is declared.
+@
+text
+@d14 1
+a14 1
+extern int decompress(int, char *);
+@
+
+
+1.5
+log
+@prototypes declared for Decompression API
+@
+text
+@d14 1
+a14 1
+extern int decompress();
+@
+
+
+1.4
+log
+@prototypes for find_index API included
+@
+text
+@d14 1
+@
+
+
+1.3
+log
+@prototypes for all compress[X].c functions is declared.
+@
+text
+@d13 1
+@
+
+
+1.2
+log
+@Type of second argument of function compress is changed to char* from int
+@
+text
+@d6 8
+a13 1
+extern compress(int, char*);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+extern compress(int, int);
+@

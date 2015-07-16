@@ -1,0 +1,463 @@
+head	1.17;
+access;
+symbols;
+locks
+	root:1.17; strict;
+comment	@ * @;
+
+
+1.17
+date	2015.07.13.11.41.44;	author root;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2015.07.13.11.07.44;	author root;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2015.07.13.10.56.06;	author root;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2015.07.12.12.22.38;	author root;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2015.07.12.10.59.43;	author root;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2015.07.11.08.41.36;	author root;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2015.07.10.11.50.04;	author root;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2015.07.10.11.48.14;	author root;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2015.07.10.11.45.49;	author root;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2015.07.10.11.43.23;	author root;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2015.06.29.13.16.14;	author root;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2015.06.26.11.57.00;	author ravi;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2015.06.25.17.04.13;	author root;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2015.06.25.14.30.43;	author root;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2015.06.25.12.51.34;	author root;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2015.06.25.12.47.56;	author root;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2015.06.25.10.06.14;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@Unique Master Array is being created using functions and pointers
+countred the codelength of the unique master array
+saved the master array in a new file
+@
+
+
+1.17
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"prototypes.h"
+
+int main()
+{
+	int fd, cl, efd, choice;
+	char buff, *arr;
+
+	fd = open_file1();
+	arr = master_array(fd);
+	while(1)
+	{
+		printf("____MAIN MENU____\n");
+		printf("1 : Compression\n");
+		printf("2 : Decompression\n");
+		printf("0 : Exit\n");
+		printf("Enter Your Choice : \t");
+		scanf("%d",&choice);
+		switch(choice)
+		{
+			case 1 : 
+				compress(fd, arr);
+				break;
+			case 2 : 
+				decompress();
+				break;
+			case 0 : 
+				exit(EXIT_SUCCESS);
+				break;
+		}
+	}
+	return 0;
+
+}
+
+int open_file1(int argc, char *argv[])
+{
+	int fd = open(argv[1], O_RDONLY);
+	if(fd == -1)
+	{
+		perror("open");
+		return -1;
+	}
+
+	
+	return fd;
+}
+
+char* master_array(int fd)
+{
+	int count, i, j, flag;
+	char buff, *arr;
+	arr = NULL;
+	
+	printf("sucess to open the file fd : %d\n",fd);
+	
+	flag=i = 0;
+
+	count = 1;
+	while(count != 0)
+	{
+		count = read(fd,&buff,1);
+		if(buff == 10)
+		break;
+				
+		for(j=0; j<i; j++)
+		{
+			if(buff == *(arr+j))
+			{
+			flag = 1;
+			break;
+			}
+		}
+		
+		if(flag == 0)
+		{
+			
+			arr = (char *) realloc(arr, i+1);
+			*(arr+i)=buff;
+			i++;
+		}
+		flag = 0;
+	
+	}
+	
+		printf("data in the buff file is: %d\n", i);
+		arr[i]=0x0A;
+		printf("master unique array :%s\n",arr);
+
+
+		return(arr);
+	
+}
+
+int create_file2(char *arr, int i)
+{
+	int efd;
+	efd = open("masterArray", O_WRONLY | O_CREAT);
+	
+	write(efd,arr,i);
+	return efd;
+}
+
+int code_length(int i)
+{
+	if(i < 4)
+		return 2;
+	else if(i < 8)
+		return 3;
+	else if(i < 16)
+		return 4;
+	else if(i < 32)
+		return 5;
+	else if(i < 64)
+		return 6;
+	else if(i < 128)
+		return 7;
+	else if(i < 256)
+		return 8;
+}
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@d87 1
+a87 1
+		arr[i]='\0';
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d87 1
+a87 1
+		arr[i]=0x03;
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d87 1
+a87 1
+		arr[i]='\0';
+@
+
+
+1.13
+log
+@called decompression API
+@
+text
+@d13 4
+a16 4
+		printf("____MAIN MENU____");
+		printf("1 : Compression");
+		printf("2 : Decompression");
+		printf("0 : Exit");
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d25 1
+a25 1
+		//		decompress();
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d16 1
+a16 1
+		printf("3 : Exit");
+d25 1
+a25 1
+			//	decompress();
+d98 1
+a98 1
+	efd = open("123", O_WRONLY | O_CREAT);
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d25 1
+a25 1
+				decompress();
+@
+
+
+1.9
+log
+@choice declared
+@
+text
+@d19 1
+a19 1
+		switch(chooice)
+@
+
+
+1.8
+log
+@cases included for selecting either copmression or decompression.
+@
+text
+@d6 1
+a6 1
+	int fd, cl, efd;
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@a8 1
+//	arr = (char *) malloc(100*sizeof(char));
+a9 1
+
+d11 21
+a31 2
+
+	compress(fd, arr);
+@
+
+
+1.6
+log
+@name of the file accepted as an argument argv[]
+@
+text
+@d6 1
+a6 1
+	int fd, cl,len, efd;
+d81 1
+a81 1
+	efd = open("GOT", O_WRONLY | O_CREAT);
+@
+
+
+1.5
+log
+@compress function is written in a file other than the main file
+And Linked to the mdc.c file.
+@
+text
+@d2 1
+d12 1
+a12 1
+	arr = master_array(fd);	
+d14 1
+a14 7
+	len = strlen(arr);
+
+	efd = create_file2(arr, len);	
+
+	cl = code_length(len);
+
+	compress(fd, efd);
+d19 1
+a19 1
+int open_file1()
+d21 1
+a21 1
+	int fd = open("hello", O_RDONLY);
+@
+
+
+1.4
+log
+@created a new header file named header.h
+header.h is included in the main using #include"header.h"
+@
+text
+@a19 1
+
+@
+
+
+1.3
+log
+@Debugged the program using GDB Debugger
+REemoved the segmentation fault
+@
+text
+@d1 1
+a1 9
+#include<stdio.h>
+#include<stdlib.h>
+#include<fcntl.h>
+#include<string.h>
+
+int code_length(int);
+int open_file1();
+char* master_array(int);
+int create_file2(char* , int);
+d5 1
+a5 1
+	int fd, cl,len;
+d15 1
+a15 1
+	create_file2(arr, len);	
+d19 2
+d90 1
+@
+
+
+1.2
+log
+@Created unique master array using realloc
+found out segmentation fault
+@
+text
+@d48 1
+a48 1
+	
+d60 1
+a60 1
+		
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d16 1
+a16 1
+	arr = (char *) malloc(100*sizeof(char));
+d48 2
+a49 2
+	arr = (char *) malloc(sizeof(char) * 100);
+
+d72 2
+@
