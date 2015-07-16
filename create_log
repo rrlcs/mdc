@@ -10,4 +10,12 @@ rlog compress4.c,v	>>	$1
 rlog compress5.c,v	>>	$1
 rlog compress6.c,v	>>	$1
 rlog compress7.c,v	>>	$1
+rlog find_index.c,v	>>	$1
+rlog decompress.c,v	>>	$1
+rlog decompress2.c,v	>>	$1
+rlog decompress3.c,v	>>	$1
+rlog decompress4.c,v	>>	$1
+rlog decompress5.c,v	>>	$1
+rlog decompress6.c,v	>>	$1
+rlog decompress7.c,v	>>	$1
 
